@@ -1,76 +1,182 @@
 body {
-    margin: 0;
-  }
-  
-  .title {
-    font-size: 5rem;
-    position: fixed;
-    left: 10vw;
-  }
-  
-  .createBtn {
-    height: 15vh;
-    width: 10vw;
-    font-size: 2rem;
-    position: fixed;
-    top: 17vh;
-    left: 5vw;
-  }
-  
-  .createThermoBtn {
-    height: 15vh;
-    width: 10vw;
-    position: fixed;
-    left: 20vw;
-    top: 17vh;
-  }
-  
-  .fillWaterBtn {
-    height: 15vh;
-    width: 10vw;
-    position: fixed;
-    top: 20vh;
-    left: 35vw;
-  
-    font-size: 2rem;
-  }
-  
-  .table {
-    display: flex;
-    gap: 15vw;
-    /* width: 200vw; */
-    /* height: 50vh; */
-    position: absolute;
-    top: 60vh;
-  }
-  
-  .system {
-    margin-left: 3vw;
-  }
-  
-  .kettle {
-    height: 50vh;
-    width: 20vw;
-    /* border-left: 100px solid transparent;
+  margin: 0;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  left: 10vw;
+}
+
+.createBtn {
+  height: 15vh;
+  width: 10vw;
+  font-size: 2rem;
+  position: fixed;
+  top: 20vh;
+  left: 5vw;
+  z-index: 1;
+
+}
+
+.createThermoBtn {
+  height: 15vh;
+  width: 10vw;
+  position: fixed;
+  left: 20vw;
+  top: 17vh;
+  z-index: 1;
+}
+
+.fillWaterBtn {
+  height: 15vh;
+  width: 10vw;
+  position: fixed;
+  top: 20vh;
+  left: 35vw;
+  z-index: 1;
+  font-size: 2rem;
+}
+
+.table {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 15vw;
+  /* width: 200vw; */
+  /* height: 50vh; */
+  position: absolute;
+  top: 60vh;
+}
+
+.system {
+  margin-left: 3vw;
+  margin-bottom: 40vh;
+}
+
+.kettle {
+  height: 50vh;
+  width: 20vw;
+  /* border-left: 100px solid transparent;
       border-right: 100px solid transparent;
       border-top: 100px solid #07CAF3; */
+  position: absolute;
+  z-index: -1;
+}
+
+.water {
+  height: 0vh;
+  width: 6vw;
+  background-color: lightblue;
+  position: relative;
+  left: 4.5vw;
+  top: 2vh;
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+  opacity: 0.4;
+  border-radius: 20%;
+}
+
+.heatBtn {
+  height: 10vh;
+  width: 5vw;
+  border-radius: 50%;
+  position: relative;
+  left: 10vw;
+  top: -1vh;
+}
+
+.steam {
+  position: relative;
+  top: -40vh;
+  height: 15vh;
+}
+
+.thermo {
+  position: absolute;
+  left: 0vw;
+  height: 35vh;
+  width: 2vw;
+}
+
+.redLine {
+  background-color: red;
+  width: 0.5vw;
+  position: absolute;
+  left: 2.3vw;
+  top: 0vh;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* .createRingBtn {
+    height: 10vh;
+    width: 10vw;
+    background-color: red;
+    font-size: 3vh;
+  } */
+
+@media screen and (max-height: 1070px) {
+  .createBtn {
+    top: 18vh;
+  }
+
+  .fillWaterBtn {
+    top: 20vh;
+  }
+
+  .createThermoBtn {
+    top: 20vh;
+  }
+}
+
+@media screen and (max-height: 830px) {
+  .createBtn {
+    top: 22vh;
+  }
+
+  .fillWaterBtn {
+    top: 25vh;
+  }
+
+  .createThermoBtn {
+    top: 25vh;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .title {
+    font-size: 1.5rem;
+
+    text-align: center;
+  }
+
+  .system {
+    margin-left: 5vw;
+  }
+
+  .kettle {
+    height: 30vh;
+    width: 25vw;
+    /* border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        border-top: 100px solid #07CAF3; */
     position: absolute;
     z-index: -1;
   }
-  
+
   .water {
     height: 0vh;
     width: 6vw;
     background-color: lightblue;
     position: relative;
-    left: 4.5vw;
+    left: 6.2vw;
     top: 2vh;
     border-bottom-left-radius: 40%;
     border-bottom-right-radius: 40%;
     opacity: 0.4;
     border-radius: 20%;
   }
-  
+
   .heatBtn {
     height: 10vh;
     width: 5vw;
@@ -79,20 +185,21 @@ body {
     left: 10vw;
     top: -1vh;
   }
-  
+
   .steam {
     position: absolute;
-    top: -22vh;
-    height: 15vh;
+    top: -12vh;
+    height: 10vh;
+    width: 18vw;
   }
-  
+
   .thermo {
     position: absolute;
     left: 0vw;
     height: 35vh;
     width: 2vw;
   }
-  
+
   .redLine {
     background-color: red;
     width: 0.5vw;
@@ -102,105 +209,7 @@ body {
     border-radius: 50%;
     z-index: 1;
   }
-  
-  /* .createRingBtn {
-    height: 10vh;
-    width: 10vw;
-    background-color: red;
-    font-size: 3vh;
-  } */
-  
-  @media screen and (max-height: 1070px) {
-    .createBtn {
-      top: 18vh;
-    }
-  
-    .fillWaterBtn {
-      top: 20vh;
-    }
-  
-    .createThermoBtn {
-      top: 20vh;
-    }
-  }
-  
-  @media screen and (max-height: 830px) {
-    .createBtn {
-      top: 22vh;
-    }
-  
-    .fillWaterBtn {
-      top: 25vh;
-    }
-  
-    .createThermoBtn {
-      top: 25vh;
-    }
-  }
-  
-  @media screen and (max-width: 450px) {
-    .title {
-      font-size: 1.5rem;
-  
-      text-align: center;
-    }
-  
-    .system {
-      margin-left: 5vw;
-    }
-  
-    .kettle {
-      height: 30vh;
-      width: 25vw;
-      /* border-left: 100px solid transparent;
-        border-right: 100px solid transparent;
-        border-top: 100px solid #07CAF3; */
-      position: absolute;
-      z-index: -1;
-    }
-  
-    .water {
-      height: 0vh;
-      width: 6vw;
-      background-color: lightblue;
-      position: relative;
-      left: 6.2vw;
-      top: 2vh;
-      border-bottom-left-radius: 40%;
-      border-bottom-right-radius: 40%;
-      opacity: 0.4;
-      border-radius: 20%;
-    }
-  
-    .heatBtn {
-      height: 10vh;
-      width: 5vw;
-      border-radius: 50%;
-      position: relative;
-      left: 10vw;
-      top: -1vh;
-    }
-  
-    .steam {
-      position: absolute;
-      top: -22vh;
-      height: 15vh;
-    }
-  
-    .thermo {
-      position: absolute;
-      left: 0vw;
-      height: 35vh;
-      width: 2vw;
-    }
-  
-    .redLine {
-      background-color: red;
-      width: 0.5vw;
-      position: absolute;
-      left: 2.3vw;
-      top: 0vh;
-      border-radius: 50%;
-      z-index: 1;
-    }
-  }
+}
+
+@media screen and (max-height: 900px) {
+}

@@ -110,9 +110,13 @@ $fillWaterBtn.addEventListener("click", () =>
 // console.log(newKettle);
 
 function addThermoKettle() {
-  kettleArr.push(new ThermoKettle());
-  renderThermoKettle();
-  console.log(kettleArr);
+  if (kettleArr.length < 4) {
+    kettleArr.push(new ThermoKettle());
+    renderThermoKettle();
+    console.log(kettleArr);
+  } else {
+    alert("only for the top line");
+  }
 }
 
 // place to start a class
