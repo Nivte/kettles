@@ -59,7 +59,7 @@ class Kettle {
     }
   }
 }
-
+debugger
 // let newKettle = new kettle("silver");
 
 function getKettles() {
