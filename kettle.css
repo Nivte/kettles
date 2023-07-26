@@ -101,6 +101,7 @@ body {
 .redLine {
   background-color: red;
   width: 0.5vw;
+height: 1vh;
   position: absolute;
   left: 2.3vw;
   top: 0vh;
@@ -115,10 +116,10 @@ body {
     font-size: 3vh;
   } */
 
-@media screen and (max-height: 1070px) {
+/* @media screen and (max-height: 1070px) {
   .createBtn {
     top: 18vh;
-  }
+  } 
 
   .fillWaterBtn {
     top: 20vh;
@@ -128,8 +129,8 @@ body {
     top: 20vh;
   }
 }
-
-@media screen and (max-height: 830px) {
+*/
+/* @media screen and (max-height: 830px) {
   .createBtn {
     top: 22vh;
   }
@@ -141,7 +142,7 @@ body {
   .createThermoBtn {
     top: 25vh;
   }
-}
+} */
 
 @media screen and (max-width: 450px) {
   .title {
@@ -151,7 +152,8 @@ body {
   }
 
   .system {
-    margin-left: 5vw;
+    margin-left: 6vw;
+    margin-bottom: 30vh;
   }
 
   .kettle {
@@ -196,18 +198,20 @@ body {
   .thermo {
     position: absolute;
     left: 0vw;
-    height: 35vh;
-    width: 2vw;
+    height: 25vh;
+    width: 4vw;
   }
 
   .redLine {
     background-color: red;
-    width: 0.5vw;
+    width: 1vw;
     position: absolute;
-    left: 2.3vw;
-    top: 0vh;
+    left: 1vw;
+    top: 1vh;
+  
     border-radius: 50%;
     z-index: 1;
+
   }
 }
 

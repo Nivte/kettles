@@ -12,6 +12,7 @@ let kettleArr = [];
 function addKettle() {
   kettleArr.push(new Kettle());
   renderAddKettle();
+  i = 1.5;
 }
 
 // place to start a class
@@ -36,6 +37,8 @@ class Kettle {
 
       // let index = 0;
       console.log(kettleArr.length);
+    } else {
+      i = 1.5;
     }
   }
 
@@ -49,6 +52,7 @@ class Kettle {
         console.log(kettleArr);
         renderHeat();
         this.isBoiling = true;
+        i = 1.5;
       } else {
         alert("fill more water");
       }
@@ -114,6 +118,7 @@ function addThermoKettle() {
     kettleArr.push(new ThermoKettle());
     renderThermoKettle();
     console.log(kettleArr);
+    i = 1.5;
   } else {
     alert("only for the top line");
   }
@@ -141,8 +146,9 @@ class ThermoKettle extends Kettle {
         console.log(kettleArr);
         renderHeatT();
         this.isBoiling = true;
+        i = 1.5;
       } else {
-        alert("not enough water");
+        alert("fill more water");
       }
     }
 
