@@ -3,7 +3,7 @@ body {
 }
 
 .title {
-  font-size: 3rem;
+  font-size: 4vh;
   text-align: center;
   left: 10vw;
 }
@@ -168,10 +168,10 @@ height: 1vh;
 
   .water {
     height: 0vh;
-    width: 6vw;
+    width: 6.4vw;
     background-color: lightblue;
     position: relative;
-    left: 6.2vw;
+    left: 6.4vw;
     top: 2vh;
     border-bottom-left-radius: 40%;
     border-bottom-right-radius: 40%;
@@ -189,8 +189,8 @@ height: 1vh;
   }
 
   .steam {
-    position: absolute;
-    top: -12vh;
+    position: relative;
+    top: -30vh;
     height: 10vh;
     width: 18vw;
   }
